@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            background-color: rgb(39, 39, 39);
+        }
+
+        .titleM {
+            color: #FC6E20;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+            font-size: 50px;
+            border-radius: 5px;
+            border-style: solid;
+            border-color: #080707;
+            background-color: #14191f;
+            letter-spacing: 3px;
+        }
+
+        .container {
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .rate {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+            background-color: yellow;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+            border-radius: 100px;
+            font-size: 25px;
+
+        }
+
+        .imgC {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+            height: 250px;
+        }
+
+        .story {
+            margin-left: 3px;
+            color: rgb(219, 219, 219);
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .stHead {
+            font-family: 'Noticia Text', serif;
+            color: #FC6E20;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .rateh {
+            color: yellow;
+            text-align: center;
+            font-family: 'Noticia Text', serif;
+            font-size: 28px;
+        }
+
+        .castH {
+            color: #00c3ff;
+            text-align: center;
+            font-family: 'Noticia Text', serif;
+            font-size: 28px;
+        }
+
+        .actH {
+            margin-left: 8px;
+            font-family: 'Concert One', cursive;
+            color: #ff2828;
+            font-size: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+</head>
+
+<body>
+
+
+    <h1 class="titleM">{{movie.MovName}}</h1>
+    <img src="/media/{{movie.postImg}}" alt="" class="imgC">
+    <hr style="height:2px;border-width:0;color:#dfff28;background-color:#eaff28">
+    <h3 class="rateh">Rating</h3>
+    <h4 class="rate">{{movie.rating}}</h4>
+    <hr style="height:2px;border-width:0;color:#ff2828;background-color:#ff2828">
+    <h2 class="stHead">Story</h2>
+    <hr style="height:2px;border-width:0;color:#ff2828;background-color:#ff2828">
+    <h3 class="story">{{movie.story}}</h3>
+    <hr style="height:2px;border-width:0;color:#00c3ff;background-color:#00c3ff">
+    <h3 class="castH">Cast</h3>
+    <h4 class="actH">{{movie.actors}}</h4>
+
+</body>
+
+</html>

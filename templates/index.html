@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <style>
+        * {
+            background-color: rgb(39, 39, 39);
+        }
+
+        .movieTitle {
+            text-align: center;
+            color: #ec5858;
+            margin: 0px;
+            margin-bottom: 8px;
+            font-size: 25.5px;
+            font-family: 'Bebas Neue', cursive;
+            padding: 2px;
+        }
+
+        .card {
+            border-style: solid;
+            border-color: #101010;
+            border-radius: 30px;
+            width: 250px;
+            margin: 8px 3px;
+            box-sizing: border-box;
+            padding: 23px;
+            display: inline-block;
+            background-color: #1c1f23;
+        }
+        .card:hover{
+            background-color: #181a1b;
+        }
+
+        .cardImg {
+            margin: auto;
+            display: block;
+
+        }
+
+        .rate {
+            text-align: center;
+            margin-top: 10px;
+            font-family: sans-serif;
+            background-color: yellow;
+            border-radius: 8px;
+        }
+
+        .siteHead {
+            font-family: 'Staatliches', cursive;
+            letter-spacing: 3px;
+            font-size: 35px;
+            color: #e7e7de;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #ff3535;
+            border-radius: 30px;
+        }
+
+        .topR {
+            font-family: 'Cinzel', serif;
+            color: rgb(228, 195, 50);
+            margin: 8px;
+        }
+        .trailerUl{
+            margin: 50%;
+            background-color: gray;
+            border-radius: 50px;
+        }
+        .more{
+            text-decoration: none;
+            color: #e7e7de;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            margin-left:5px ;
+            border-style: bold;
+            border-color: #ec5858;
+            border-radius: 8px;
+            background-color: #0f86b9;
+            padding: 3.5px;
+        }
+        .more:hover{
+            background-color:#0a719c ;
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+
+<body>
+    <h1 class="siteHead">Find Great Movies</h1>
+    {% for movie in allmovies %}
+    
+    <div class="card">
+        <h2 class="movieTitle">{{movie.MovName}}</h2>
+        <img src="/media/{{movie.postImg}} " width="180px" height="200px" alt="image" class="cardImg">
+        <h4 class="rate">{{movie.rating}}</h4>
+        <a href="/{{movie.slug}}" class="more" >More</a>
+    </div>
+    
+    {% endfor %}
+
+</body>
+
+</html>
