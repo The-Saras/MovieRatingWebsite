@@ -91,7 +91,54 @@
         .more:hover{
             background-color:#0a719c ;
         }
-        
+        .inArea{
+            margin-top: 8px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            font-family: 'Boogaloo', cursive;
+            width: 200px;
+            height: 18px;
+            color: wheat;
+        }
+        .inArea:focus{
+            border: 3px solid #555;
+        }
+        .inAreao{
+            margin-top: 8px;
+            margin-bottom: 20px;
+            margin-left: 24px;
+            font-family: 'Boogaloo', cursive;
+            width: 200px;
+            height: 18px;
+            color: wheat;
+        }
+        .Form{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            margin-top: 50px;
+            
+        }
+        .border{
+            border-style: solid;
+            border-color: #1687a7;
+            border-radius: 18px;
+            background-color: #d3e0ea;
+            padding-left: 110px;
+        }
+        .btn-blue{
+            background-color: rgb(96, 145, 250);
+            border-style: none;
+            font-size: 17px;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+        .btn-blue:hover{
+            background-color: rgb(76, 128, 241);
+            cursor: pointer;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,16 +148,24 @@
 <body>
     <h1 class="siteHead">Find Great Movies</h1>
     {% for movie in allmovies %}
-    
     <div class="card">
         <h2 class="movieTitle">{{movie.MovName}}</h2>
         <img src="/media/{{movie.postImg}} " width="180px" height="200px" alt="image" class="cardImg">
         <h4 class="rate">{{movie.rating}}</h4>
         <a href="/{{movie.slug}}" class="more" >More</a>
     </div>
-    
     {% endfor %}
 
+    <div class="Form" id="modal">
+        <form method="post" action="/signup" class="border">
+            User Name:<input type="text" id="user_name" name="user_name" class="inArea" placeholder="User Name"><br>
+            First Name:<input type="text" id="name" name="name" class="inArea" placeholder="Name"><br>
+            Last Name:<input type="text" id="last_name" name="last_name" class="inArea" placeholder="Last Name"><br>
+            Password:<input type="text" id="Password" name="Password" class="inArea" placeholder="Last Name"><br>
+            Email Id:<input type="email" id="email" name="email" class="inAreao" placeholder="Email"><br>
+            <button type="submit" class="btn-blue">Signup</button>
+        </form>
+    </div>
 </body>
 
 </html>
